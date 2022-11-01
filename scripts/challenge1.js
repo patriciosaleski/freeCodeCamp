@@ -1,20 +1,12 @@
-"use strict";
-const checkButton = document.getElementById("palindrome-button");
-const resetButton = document.getElementById("reset-input");
-const result = document.getElementById("challenge1-result");
-const input = document.getElementById("challenge1-input");
-checkButton.disabled = true;
-resetButton.addEventListener("click", () => {
-    resetButton.parentElement.children[0].textContent = "";
-    result.placeholder = "waiting";
-    checkButton.disabled = true;
-});
-input.addEventListener("keyup", () => {
-    const value = input.textContent;
+const checkPalindromeButton = document.getElementById("palindrome-button");
+const challenge1Result = document.getElementById("challenge1-result");
+const challenge1Input = document.getElementById("challenge1-input");
+checkPalindromeButton.disabled = true;
+challenge1Input.addEventListener("keyup", () => {
+    const value = challenge1Input.value;
     value.length > 0
-        ? (checkButton.disabled = false)
-        : (checkButton.disabled = true);
-    result.placeholder = "waiting";
+        ? (checkPalindromeButton.disabled = false)
+        : (checkPalindromeButton.disabled = true);
 });
 function checkPalindrome(str) {
     const regEx = /[_\W]+/g;
@@ -24,8 +16,8 @@ function checkPalindrome(str) {
     const reverseString = string.split("").reverse().join("");
     return string === reverseString;
 }
-checkButton.addEventListener("click", () => {
-    checkPalindrome(input.textContent)
-        ? (result.placeholder = "true")
-        : (result.placeholder = "false");
+checkPalindromeButton.addEventListener("click", () => {
+    checkPalindrome(challenge1Input.value)
+        ? (challenge1Result.placeholder = "true")
+        : (challenge1Result.placeholder = "false");
 });
