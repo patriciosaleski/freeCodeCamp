@@ -1,22 +1,14 @@
-const checkButton = (document.getElementById("palindrome-button") as HTMLInputElement)
-const resetButton = (document.getElementById("reset-input") as HTMLInputElement)
-const result = (document.getElementById("challenge1-result") as HTMLInputElement)
-const input = (document.getElementById("challenge1-input") as HTMLInputElement)
+const checkPalindromeButton = (document.getElementById("palindrome-button") as HTMLInputElement)
+const challenge1Result = (document.getElementById("challenge1-result") as HTMLInputElement)
+const challenge1Input = (document.getElementById("challenge1-input") as HTMLInputElement)
 
-checkButton.disabled = true
+checkPalindromeButton.disabled = true
 
-resetButton.addEventListener("click", () => {
-  resetButton.parentElement!.children[0].textContent = ""
-  result.placeholder = "waiting"
-  checkButton.disabled = true
-})
-
-input.addEventListener("keyup", () => {
-  const value = input.textContent!
+challenge1Input.addEventListener("keyup", () => {
+  const value = challenge1Input.value!
   value.length > 0
-    ? (checkButton.disabled = false)
-    : (checkButton.disabled = true)
-  result.placeholder = "waiting"
+    ? (checkPalindromeButton.disabled = false)
+    : (checkPalindromeButton.disabled = true)
 })
 
 function checkPalindrome(str: string) {
@@ -30,8 +22,8 @@ function checkPalindrome(str: string) {
   return string === reverseString
 }
 
-checkButton.addEventListener("click", () => {
-  checkPalindrome(input.textContent as string)
-    ? (result.placeholder = "true")
-    : (result.placeholder = "false")
+checkPalindromeButton.addEventListener("click", () => {
+  checkPalindrome(challenge1Input.value as string)
+    ? (challenge1Result.placeholder = "true")
+    : (challenge1Result.placeholder = "false")
 })

@@ -29,15 +29,26 @@
                 <p>Return <code>true</code> if the given string is a palindrome. Otherwise, return <code>false</code>.</p>
             </div>
             <div class="challenge-input">
-                <span id="challenge1-input" class="input" role="textbox" contenteditable placeholder="Enter your text here"></span>
-                <button id="palindrome-button">Check palindrome</button>
+                <input id="challenge1-input" class="input" type="text" placeholder="Enter your text here">
+                <button id="palindrome-button" title="Invalid input">Check palindrome</button>
                 <i class="fa-solid fa-arrow-right"></i>
-                <input type="text" disabled placeholder="waiting" id="challenge1-result">
-                <button id="reset-input">Reset</button>
+                <input id="challenge1-result" type="text" disabled placeholder="waiting">
+                <button name="reset-button">Reset</button>
             </div>
         </div>
         <div class="challenge">
-            <h2>Challenge #2 WIP</h2>
+            <div class="challenge-description">
+                <h2>Challenge #2: Roman Numeral Converter</h2>
+                <p>Convert a given number into a roman numeral. That number must be a positive integer between 1 to 3999</p>
+                <p>Example: 29 is XXIX in Roman numerals</p>
+            </div>
+            <div class="challenge-input">
+                <input id="challenge2-input" class="input" type="number" min="1" max="3999" placeholder="Enter the number to convert">
+                <button id="roman-button" title="Invalid input">Convert to Roman Numeral</button>
+                <i class="fa-solid fa-arrow-right"></i>
+                <input id="challenge2-result" type="text" disabled placeholder="waiting">
+                <button name="reset-button">Reset</button>
+            </div>
         </div>
         <div class="challenge">
             <h2>Challenge #3 WIP</h2>
@@ -55,6 +66,7 @@
     <script src="https://kit.fontawesome.com/25cc5f24fb.js" crossorigin="anonymous"></script>
     <script src="./scripts/index.js"></script>
     <script src="./scripts/challenge1.js"></script>
+    <script src="./scripts/challenge2.js"></script>
 </body>
 
 </html

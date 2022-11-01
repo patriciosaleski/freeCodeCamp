@@ -111,7 +111,7 @@ header {
     padding: map-get($spacing, "l");
     width: 728px;
 
-    span {
+    .input {
       width: 85%;
       margin: 0 auto;
       max-width: 940px;
@@ -120,15 +120,10 @@ header {
       border-radius: map-get($spacing, "s");
       padding-left: map-get($spacing, "s");
       padding-top: 2px;
-      overflow-y: scroll;
-
-      &[contenteditable]:empty::before {
-        content: attr(placeholder);
-      }
     }
 
     &-description {
-      gap: map-get($spacing, "s");
+      gap: map-get($spacing, "s");  
 
       h2 {
         font-family: consolas, "sans-serif";
@@ -165,10 +160,14 @@ header {
           cursor: pointer;
           background-color: map-get($main-bg-color, "dark");
         }
+
+        &:disabled {
+          cursor: not-allowed;
+        }
       }
 
       input:last-of-type {
-        width: 44px;
+        width: 115px;
       }
     }
   }
