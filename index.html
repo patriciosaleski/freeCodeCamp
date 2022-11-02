@@ -26,7 +26,8 @@
                 <h2>Challenge #1: Palindrome check</h2>
                 <p>A palindrome is a word or sentence that's spelled the same way both forward and backward,
                     ignoring punctuation, case, and spacing.</p>
-                <p>Return <code>true</code> if the given string is a palindrome. Otherwise, return <code>false</code>.</p>
+                <p>Return <code>true</code> if the given string is a palindrome. Otherwise, return <code>false</code>.
+                </p>
             </div>
             <div class="challenge-input">
                 <input id="challenge1-input" class="input" type="text" placeholder="Enter your text here">
@@ -39,11 +40,13 @@
         <div class="challenge">
             <div class="challenge-description">
                 <h2>Challenge #2: Roman Numeral Converter</h2>
-                <p>Convert a given number into a roman numeral. That number must be a positive integer between 1 to 3999</p>
+                <p>Convert a given number into a roman numeral. That number must be a positive integer between 1 to 3999
+                </p>
                 <p>Example: 29 is XXIX in Roman numerals</p>
             </div>
             <div class="challenge-input">
-                <input id="challenge2-input" class="input" type="number" min="1" max="3999" placeholder="Enter the number to convert">
+                <input id="challenge2-input" class="input" type="number" min="1" max="3999"
+                    placeholder="Enter the number to convert">
                 <button id="roman-button" title="Invalid input">Convert to Roman Numeral</button>
                 <i class="fa-solid fa-arrow-right"></i>
                 <input id="challenge2-result" type="text" disabled placeholder="waiting">
@@ -51,7 +54,19 @@
             </div>
         </div>
         <div class="challenge">
-            <h2>Challenge #3 WIP</h2>
+            <div class="challenge-description">
+                <h2>Challenge #3: Caesars Cipher</h2>
+                <p>One of the simplest and most widely known ciphers is a Caesar cipher, also known as a shift cipher.
+                    In a shift cipher the meanings of the letters are shifted by some set amount.</p>
+                <p>A common modern use is the ROT13 cipher, where the values of the letters are shifted by 13 places. Thus A ↔ N, B ↔ O and so on.</p>
+            </div>
+            <div class="challenge-input">
+                <input id="challenge3-input" class="input" type="text" placeholder="Enter the sentence to decipher">
+                <button id="caesars-cipher" title="Invalid input">Decipher sentence</button>
+                <i class="fa-solid fa-arrow-right"></i>
+                <input id="challenge3-result" type="text" disabled placeholder="waiting" style="width: 55%;">
+                <button name="reset-button">Reset</button>
+            </div>
         </div>
         <div class="challenge">
             <h2>Challenge #4 WIP</h2>
@@ -67,6 +82,7 @@
     <script src="./scripts/index.js"></script>
     <script src="./scripts/challenge1.js"></script>
     <script src="./scripts/challenge2.js"></script>
+    <script src="./scripts/challenge3.js"></script>
 </body>
 
 </html
