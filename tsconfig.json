@@ -61,6 +61,7 @@
     "exclude": ["node_modules"],
     "files": [
         "./scripts/challenge1.ts",
-        "./scripts/challenge2.ts"
+        "./scripts/challenge2.ts",
+        "./scripts/challenge3.ts"
     ]
   }
