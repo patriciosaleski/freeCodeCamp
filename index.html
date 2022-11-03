@@ -58,7 +58,8 @@
                 <h2>Challenge #3: Caesars Cipher</h2>
                 <p>One of the simplest and most widely known ciphers is a Caesar cipher, also known as a shift cipher.
                     In a shift cipher the meanings of the letters are shifted by some set amount.</p>
-                <p>A common modern use is the ROT13 cipher, where the values of the letters are shifted by 13 places. Thus A ↔ N, B ↔ O and so on.</p>
+                <p>A common modern use is the ROT13 cipher, where the values of the letters are shifted by 13 places.
+                    Thus A ↔ N, B ↔ O and so on.</p>
             </div>
             <div class="challenge-input">
                 <input id="challenge3-input" class="input" type="text" placeholder="Enter the sentence to decipher">
@@ -69,7 +70,19 @@
             </div>
         </div>
         <div class="challenge">
-            <h2>Challenge #4 WIP</h2>
+            <div class="challenge-description">
+                <h2>Challenge #4: US Phone number validator</h2>
+                <p>The user may fill out the form field any way they choose as long as it has the format of a valid US
+                    number.</p>
+                <p>Return true if the passed string looks like a valid US phone number.</p>
+            </div>
+            <div class="challenge-input">
+                <input id="challenge4-input" class="input" type="text" placeholder="Enter the phone number to validate">
+                <button id="us-phone-validator" title="Invalid input">Check phone number</button>
+                <i class="fa-solid fa-arrow-right"></i>
+                <input id="challenge4-result" type="text" disabled placeholder="waiting">
+                <button name="reset-button">Reset</button>
+            </div>
         </div>
         <div class="challenge">
             <h2>Challenge #5 WIP</h2>
@@ -83,6 +96,7 @@
     <script src="./scripts/challenge1.js"></script>
     <script src="./scripts/challenge2.js"></script>
     <script src="./scripts/challenge3.js"></script>
+    <script src="./scripts/challenge4.js"></script>
 </body>
 
 </html

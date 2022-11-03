@@ -6,7 +6,6 @@ decipherButton.disabled = true
 
 challenge3Input.addEventListener("keyup", () => {
   const value = challenge3Input.value
-  console.log(value)
   value.length > 0
     ? (decipherButton.disabled = false)
     : (decipherButton.disabled = true)
