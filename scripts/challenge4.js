@@ -22,15 +22,11 @@ function checkPhone(str) {
 }
 function phoneValidator(str) {
     if (checkPhone(str)) {
-        const phoneRegEx = [
-            /^[0-9]+$/,
-            /((\([0-9]{3}\)) |(\([0-9]{3}\))|[0-9]{3}-)[0-9]{3}-[0-9]{4}/,
-            /^([0-9]{3} |[0-9]{1} [0-9]{3} )([0-9]{3} [0-9]{4})/,
-        ];
-        return phoneRegEx.some((el) => el.test(str) === true);
+        const regEx = /^([+]?1[\s]?)?(((\(\d{3}\)[ ]{0,1}|\d{3}[\s-]))\d{3}[\s|-]\d{4}|\d{10}$)/;
+        return regEx.test(str);
     }
     else {
-        challenge4Input.setCustomValidity("Invalid phone number. Number should be 10, 12 to 14 in length.");
+        challenge4Input.setCustomValidity("Invalid phone number. Check and try again.");
         challenge4Input.reportValidity();
         validatorButton.disabled = true;
     }
