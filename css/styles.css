@@ -1,3 +1,11 @@
+b {
+  font-weight: bold;
+}
+
+code {
+  font-family: monospace;
+}
+
 a:visited {
   color: #000000;
 }
@@ -57,6 +65,7 @@ header .author i {
   align-items: center;
 }
 .challenges-wrapper .challenge {
+  position: relative;
   gap: 32px;
   background-color: #f3f3f3;
   border-radius: 16px;
@@ -111,6 +120,22 @@ header .author i {
 }
 .challenges-wrapper .challenge-input input:last-of-type {
   width: 115px;
+}
+.challenges-wrapper .challenge-code {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  transition: background-color 0.2s ease-in-out;
+}
+.challenges-wrapper .challenge-code:hover {
+  background-color: #b8b8b8;
 }
 
 @media screen and (max-width: 1024px) {
